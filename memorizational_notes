@@ -1,0 +1,50 @@
+
+*creating tablespace
+create tablespace <tablespacename> datafile <location of datafile> size <sizeofdatafile> 
+autoextend on next <the size to be extended>
+
+*creating user
+create user <username> identified by <password> default tablespace <tablespacename> temporary
+tablespace <tempspacename>
+
+*relation between user and tablespace.
+scheme(user) is partial space of tablespace where the table would be stored.
+
+
+1.view is fake 2.table.
+3.index to make number for quick search
+4.synonym to mark name for a data
+5.sequence to mark prime key 
+(6.function - input process output , 7.procedure - input process) is in 8.package
+
+objects of database
+1.view - fake table
+2.table - where store data
+3.index - numbering for quicker search
+4.synonym - commentary data
+5.sequence - pk maknig 
+6.procedure - input process
+7.function - input proces output
+8.pcakcge - bunch of procedure and function.
+
+1) table - In where the data would be added, deleted , modified
+            *got UNIQUE NAME to distinguish objects
+            *Comprised by Row and Column (record,field)
+            *one row is in ONLY one table
+   contraints - table names are unique in a database
+              - column names are unique in a table
+              - rows are uqnie in a table
+              - rows canonot be duplicated
+
+    create table <tablename> 
+            ( field name1 TYPE [NOT NULL | NULL],
+              field name2 TYPE [NOT NULL | NULL],
+                                    .
+                                    .
+              constraint index_key Primary key (Field_name1 [,field_name2])
+              constraint foreign_key Foriegn key (Field_name)
+                                      References foreign_table_name(foreign feild name))
+               )
+
+
+    
